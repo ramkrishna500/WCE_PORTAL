@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+<div class="container mt-5">
+  <h1>Register</h1>
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+          <form action="/register" method="POST">
+          <input type="email" name="email" placeholder="E-mail" required="" class="form-control"><br/>
+				  <input type="text" name="username" placeholder="Name" required="" class="form-control"><br/>
+				  <input type="text" name="rno" placeholder="PRN" required="" class="form-control"><br/>
+				  <input type="password" name="password" placeholder="Password" required="" class="form-control"><br/>
+				  <input type="password" name="passwordConf" placeholder="Confirm Password" required="" class="form-control"><br/>
+				  <input type="submit" value="Register" class="btn btn-success">
+          </form>
+          <% if(locals.register){ %>
+            <div class="alter alert-success text-center">
+                <%= register %>
+            </div>
+        <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%- include('partials/header') %>
